@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
     this.isSending = true
     const msg = {
       to: 'mosinmiloluwa.o@gmail.com',
-      from: 'mosinmiloluwa.o@gmail.com',
+      from: this.contactForm.email,
       subject: `${this.contactForm.subject}`,
       name: this.contactForm.name,
       message: this.contactForm.message
@@ -48,6 +48,7 @@ export class ContactComponent implements OnInit {
         this.toaster.success('Email sent successfully.', '', { timeOut: 6000 })
         this.contactForm.to = ""
         this.contactForm.from = ""
+        this.contactForm.email = ""
         this.contactForm.subject = ""
         this.contactForm.name = ""
         this.contactForm.message = ""
