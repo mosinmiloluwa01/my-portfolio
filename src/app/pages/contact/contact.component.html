@@ -1,0 +1,61 @@
+<div class="about-me-container">
+  <app-navigation></app-navigation>
+  <h1 class="big-title">Contact Me</h1>
+  <div class="contact-inner-container">
+    <div class="form-container">
+      <h4 class="contact-title">Send A Message</h4>
+      <form>
+        <div class="row">
+          <div class="col form-group">
+            <input [(ngModel)]="contactForm.name" name="name" class="form-control" autocomplete="off" type="text"
+              placeholder="Name">
+          </div>
+          <div class="col form-group">
+            <input [(ngModel)]="contactForm.email" name="email" class="form-control" autocomplete="off" type="email"
+              placeholder="Email" (keypress)="validateEmail(contactForm.email)"
+              (onkeyup)="validateEmail(contactForm.email)" (keyup)="validateEmail(contactForm.email)"
+              (change)="validateEmail(contactForm.email)"
+              [ngStyle]="contactForm.email && !emailValid ? {'border': '1px solid red'} : {'border': '1px solid var(--form-control-border-color)'}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <input [(ngModel)]="contactForm.subject" name="subject" class="form-control" autocomplete="off" type="text"
+              placeholder="Subject">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <textarea [(ngModel)]="contactForm.message" name="message" class="form-control" autocomplete="off"
+              placeholder="Message" rows="3"></textarea>
+          </div>
+        </div>
+        <button *ngIf="!isSending" (click)="sendMail()" class="btn primary-btn" [disabled]="!contactForm.name || !contactForm.email || !emailValid
+          || !contactForm.subject || !contactForm.message">Submit</button>
+        <button *ngIf="isSending" class="btn primary-btn" disabled>Processing...</button>
+      </form>
+    </div>
+    <div class="contact-info-container">
+      <h4 class="contact-title">Contact Information</h4>
+      <p class="intro">I am available to discuss collaboration on new projects as well as other opportunities, please
+        feel free to
+        contact me!
+      </p>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div class="contact-text-container">
+          <p class="heading">Email</p>
+          <p class="text">Mosinmiloluwa.o@gmail.com</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <div class="contact-text-container">
+          <p class="heading">Linkedin</p>
+          <p (click)="goToSite('https://www.linkedin.com/in/mosinmiloluwa-oluwagbohunmi-owoso-520125104/')"
+            class="text link">Link</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="navigation-container"
+  [ngStyle]="window.innerWidth <= 1024 ? {'background-color':'var(--transparent-grey-color)'} : {'background-color':'transparent'}">
+  <div class="circle" [routerLink]="[ '/home']" [ngClass]="(location.pathname == '/home' ? 'circle-active' : '')">
+    <i class="fas fa-home"></i>
+  </div>
+  <div class="circle" [routerLink]="[ '/about-me']"
+    [ngClass]="(location.pathname == '/about-me' ? 'circle-active' : '')">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="circle" [routerLink]="[ '/portfolio']"
+    [ngClass]="(location.pathname == '/portfolio' ? 'circle-active' : '')">
+    <i class="fas fa-briefcase"></i>
+  </div>
+  <div class="circle" [routerLink]="[ '/contact']" [ngClass]="(location.pathname == '/contact' ? 'circle-active' : '')">
+    <i class="fas fa-envelope"></i>
+  </div>
+  <div (click)="setMode()" class="circle" [ngClass]="(isDarkMode ? 'circle-active' : 'dark-mode')">
+    <i [ngClass]="(isDarkMode ? 'fas fa-lightbulb' : 'fas fa-moon')"></i>
+  </div>
+</div>

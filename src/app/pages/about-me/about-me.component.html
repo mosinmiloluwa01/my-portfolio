@@ -1,0 +1,59 @@
+<div class="about-me-container">
+  <app-navigation></app-navigation>
+  <h1 class="big-title">About Me</h1>
+  <div class="top-container">
+    <img src="assets/images/Simi.jpg" alt="" class="image">
+    <div class="text-container">
+      <div class="row">
+        <div class="col ">
+          <p>First Name: Mosinmiloluwa</p>
+        </div>
+        <div class="col ">
+          <p>Last Name: Owoso</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col ">
+          <p>Email: mosinmiloluwa.o@gmail.com</p>
+        </div>
+        <div class="col ">
+          <p>Stack: Full stack</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col ">
+          <p>Github: <span (click)="goToSite('https://github.com/mosinmiloluwa01')" class="link">mosinmiloluwa01</span>
+          </p>
+        </div>
+        <div class="col ">
+          <p>LinkedIn: <span
+              (click)="goToSite('https://www.linkedin.com/in/mosinmiloluwa-oluwagbohunmi-owoso-520125104/')"
+              class="link">Link</span></p>
+        </div>
+      </div>
+
+      <div class="tiles-container row">
+        <div class="col tile">
+          <i class="fas fa-laptop-code"></i>
+          <p class="tile-title">Frontend</p>
+          <p class="tile-p">HTML, CSS, SCSS, Bootstrap, Javascript, Angular, React, Redux, Jasmine</p>
+        </div>
+        <div class="col tile">
+          <i class="fas fa-tools"></i>
+          <p class="tile-title">Backend</p>
+          <p class="tile-p">NodeJS, Express, MYSQL, PostgreSQL, Mocha, Chai, Jasmine</p>
+        </div>
+        <div class="col tile">
+          <i class="fas fa-plane-departure"></i>
+          <p class="tile-title">Devops</p>
+          <p class="tile-p">Docker, Heroku, Netlify, Gitlab Runners, Travis</p>
+        </div>
+      </div>
+      <!-- <div class="button-row">
+        <button
+          (click)="goToSite('https://docs.google.com/document/d/1uOuTEconA7wyX-q6CGEIxo5III1fJSLu5j8O9aG5IQA/view?usp=sharing')"
+          class="btn">View CV</button>
+      </div> -->
+    </div>
+  </div>
+</div>
