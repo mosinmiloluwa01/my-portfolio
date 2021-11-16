@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
         document.documentElement.style.setProperty('--transparent-grey-color', `#eaeaea0f`);
         document.documentElement.style.setProperty('--form-control-border-color', `transparent`);
         document.documentElement.style.setProperty('--form-control-bg-color', `#eaeaea0f`);
+        document.documentElement.style.setProperty('--tile-bg-color', `#1c1c24`);
         return;
       }
       if (!this.isDarkMode) {
@@ -38,6 +39,7 @@ export class AppComponent implements OnInit {
         document.documentElement.style.setProperty('--transparent-grey-color', `#eaeaea`);
         document.documentElement.style.setProperty('--form-control-border-color', `#eaeaea`);
         document.documentElement.style.setProperty('--form-control-bg-color', `transparent`);
+        document.documentElement.style.setProperty('--tile-bg-color', `transparent`);
       }
     })
   }
